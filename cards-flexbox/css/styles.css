@@ -15,10 +15,20 @@ h2 {
 	text-align: center;
 	font-size: 1.6rem;
 }
+/* Make images Responsive */
+img {
+	max-width: 100%;
+}
+
 .main-content {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
-.entry {
+
+/* Apply to Smaller Device */
+@media (min-width: 480px) {
+	.entry {
+		flex: 0 0 calc(50% - 1rem);
+	}
 }
