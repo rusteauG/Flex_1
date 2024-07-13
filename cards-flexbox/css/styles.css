@@ -6,6 +6,10 @@ html {
 *::after {
 	box-sizing: inherit;
 }
+body {
+	box-sizing: border-box;
+	background-color: #f2f2f2;
+}
 /* container */
 .container {
 	max-width: 1200px;
@@ -14,6 +18,11 @@ html {
 h2 {
 	text-align: center;
 	font-size: 1.6rem;
+}
+h3 {
+	margin: 0;
+	font-weight: 700;
+	font-family: "Libre Baskerville", serif;
 }
 /* Make images Responsive */
 img {
@@ -26,9 +35,20 @@ img {
 	flex-wrap: wrap;
 }
 
+.entry,
+.content {
+	background-color: #fff;
+}
+
 /* Apply to Smaller Device */
 @media (min-width: 480px) {
 	.entry {
 		flex: 0 0 calc(50% - 1rem);
+	}
+}
+
+@media (min-width: 768px) {
+	.entry {
+		flex: 0 0 calc(33.33% - 1rem);
 	}
 }
