@@ -1,0 +1,14 @@
+/* Using custom properties in CSS  known as CSS variables, */
+/* Define custom properties at the root (global) level */
+:root {
+	--mainFont: "Krub", sans-serif;
+	--white: #ffffff;
+	--primary: #ffc107;
+	--secondary: #0097a7;
+	--gray: #757575;
+	--dark: #212121;
+}
+
+body {
+	font-family: var(--mainFont);
+}
