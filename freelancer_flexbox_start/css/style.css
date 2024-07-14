@@ -121,3 +121,81 @@ h3 {
 p {
 	line-height: 2;
 }
+
+@media (min-width: 768px) {
+	.services-container {
+		display: flex;
+		justify-content: space-between;
+	}
+	.service {
+		flex: 0 0 calc(33.3% - 1rem);
+	}
+}
+.service {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.icons {
+	height: 100px;
+	width: 100px;
+	display: flex;
+	background-color: var(--primary);
+	border-radius: 50%;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.icons i {
+	font-size: 2rem;
+}
+
+/* Form */
+
+form {
+	background-color: var(--gray);
+	padding: 2rem;
+	border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+	form {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.form-container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.field {
+		flex: 0 0 calc(50% - 1rem);
+	}
+}
+
+.field {
+	display: flex;
+	margin-bottom: 1rem;
+	align-items: center;
+}
+.field label {
+	flex: 0 0 90px;
+	color: var(--white);
+}
+.field input[type="text"],
+.field input[type="tel"],
+.field input[type="mail"],
+.field textarea {
+	flex: 1;
+	height: 2.4rem;
+}
+.w-100 {
+	flex: 0 0 100%;
+}
+.field textarea {
+	height: 4rem;
+}
+.submit-form {
+	display: flex;
+	justify-content: flex-end;
+}
