@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "freelancer_flexbox_start",
+		"liveServer.settings.port": 5501
+	}
+}
