@@ -110,3 +110,59 @@ nav ul a {
 	display: block; /*OR flex*/
 	margin-top: 0.6rem;
 }
+
+/* dropDown */
+
+.dropdown ul {
+	display: flex;
+	flex-direction: column;
+}
+
+@media (min-width: 768px) {
+	.dropdown ul {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+.dropdown ul li {
+	display: flex;
+	flex-direction: column;
+}
+
+.dropdown ul li ul {
+	display: none;
+}
+.dropdown ul li:hover ul {
+	display: block;
+	margin-top: 1rem;
+}
+
+.dropdown ul li ul li:hover {
+	background-color: #ff5e62;
+}
+
+@media (min-width: 768px) {
+	.dropdown ul li {
+		position: relative;
+		flex: 1 1 100%;
+	}
+	.dropdown ul li ul {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		display: none;
+	}
+	.dropdown ul li:hover ul {
+		flex-wrap: wrap;
+		display: flex;
+		background-color: #ff5e62;
+		margin-top: 0;
+	}
+	.dropdown ul li ul li:hover {
+		background-color: #1a2770;
+		/* background-color: #ff5e62; */
+	}
+}
+
+/* Social Menu */

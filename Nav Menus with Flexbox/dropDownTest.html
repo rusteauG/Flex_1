@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			nav {
+				background-color: #3f51b5;
+			}
+			nav ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+			}
+			nav ul li {
+				position: relative;
+				padding: 10px;
+				font-size: 1.6rem;
+				color: white;
+				font-family: sans-serif;
+			}
+			nav ul li:hover {
+				background-color: #1a2770;
+			}
+			nav ul a {
+				color: white;
+				text-decoration: none;
+				font-size: 1.4rem;
+			}
+
+			nav ul li ul {
+				display: none;
+				position: absolute;
+				background-color: #da3838;
+				width: 200px;
+				top: 100%;
+				left: 0;
+			}
+			nav ul li:hover ul {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li>
+					Home
+					<ul>
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+					</ul>
+				</li>
+				<li>
+					About
+					<ul>
+						<li><a href="#">Link 4</a></li>
+						<li><a href="#">Link 5</a></li>
+						<li><a href="#">Link 6</a></li>
+					</ul>
+				</li>
+				<li>Contact</li>
+			</ul>
+		</nav>
+	</body>
+</html>
