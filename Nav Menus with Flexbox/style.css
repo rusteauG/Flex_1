@@ -25,7 +25,7 @@ body {
 	background-color: white;
 	max-width: 1000px;
 	padding: 20px 30px 0 30px;
-	min-height: calc(100vh - 20px);
+	min-height: calc(100vh -1rem);
 	margin: 0 auto;
 }
 nav {
@@ -204,4 +204,23 @@ nav ul a {
 .social-menu a[href*="http://pinterest.com"]::before
 {
 	content: "\f231";
+}
+
+.naviagtion-social-dropdown {
+	display: flex;
+	justify-content: space-between;
+	background-color: #3f51b5;
+	align-items: center;
+	flex-direction: column;
+}
+
+.naviagtion-social-dropdown .dropdown ul li {
+	flex: 1 0 auto;
+}
+.naviagtion-social-dropdown .dropdown {
+	flex: 0 0 100%;
+}
+.naviagtion-social-dropdown .social-menu {
+	order: -1;
+	flex: 0 0 100%;
 }
