@@ -32,14 +32,12 @@ img {
 	justify-content: center;
 	align-items: center;
 }
-
+.site-header img {
+	max-width: 90%;
+}
 .main-navigation {
 	background-color: var(--primary);
 	padding: 1rem 0;
-}
-
-.main-navigation ul li {
-	list-style: none;
 }
 
 .main-navigation ul {
@@ -47,7 +45,38 @@ img {
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
+	list-style: none;
 }
+
+@media (min-width: 768px) {
+	.main-navigation ul {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.main-navigation ul li {
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.main-navigation ul li:last-of-type {
+	margin-bottom: 0;
+}
+
+.main-navigation ul li a {
+	color: var(--white);
+	text-decoration: none;
+	font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+	.main-navigation ul li {
+		margin-bottom: 0;
+	}
+}
+
+/* content */
 
 /* CSS styles for the footer */
 footer {
