@@ -1,0 +1,15 @@
+@use "sass:math";
+@import "./my-style.scss";
+
+.another-element {
+	height: math.div(480px, 12) * 3; // Calculate the height using the math.div() function
+}
+
+// usage
+.circle {
+	@include circle(100px, #007bff);
+}
+// usage
+.circle1 {
+	@include circle(100px, #112eed);
+}

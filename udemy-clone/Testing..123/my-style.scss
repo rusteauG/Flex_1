@@ -1,0 +1,14 @@
+@use "sass:math";
+
+.container {
+	width: math.div(960px, 12) * 6; // Calculate the width using the math.div() function
+	padding: math.sqrt(16);
+	margin: 0 auto;
+	background-color: aqua;
+}
+@mixin circle($size, $color) {
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	background-color: $color;
+}

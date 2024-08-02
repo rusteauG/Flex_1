@@ -5,4 +5,33 @@
 	.bg-#{$key} {
 		background-color: $val;
 	}
+
+	// For loop to iterate toeach variation of color 1 Lighter -9 darker
+	// Light Variation
+
+	@if ($val !=black and $val != white) {
+		@for $i from 1 through 9 {
+			.text-#{$key}-light-#{$i} {
+				color: mix(white, $val, $i * 10%);
+			}
+			.bg-#{$key}-light-#{$i} {
+				background-color: mix(white, $val, $i * 10%);
+			}
+		}
+
+		// dark Var
+		@for $i from 1 through 9 {
+			.text-#{$key}-dark-#{$i} {
+				color: mix(black, $val, $i * 10%);
+			}
+			.bg-#{$key}-dark-#{$i} {
+				background-color: mix(black, $val, $i * 10%);
+			}
+		}
+	}
 }
+// @if (10 <5) {
+// 	.test-if {
+// 		color: black;
+// 	}
+// }
