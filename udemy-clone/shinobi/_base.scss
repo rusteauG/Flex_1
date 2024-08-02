@@ -31,3 +31,9 @@ img {
 h2 {
 	font-size: $font-size-xl;
 }
+
+.hover-dark,
+.hover-light {
+	display: flex;
+	justify-content: space-evenly;
+}

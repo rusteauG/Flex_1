@@ -6,14 +6,41 @@
 		background-color: $val;
 	}
 
+	// .text-hover-#{$key}:hover {
+	// 	color: $val;
+	// }
+
+	//Use PARENT SELECTOR INSTEAD
+	// apply styles to multiple child elements at once:
+
+	.text-hover-#{$key} {
+		&:hover {
+			color: $val;
+		}
+		// &:last-child {
+		// }
+		// &:nth-child(2) {
+		// }
+	}
+
 	// For loop to iterate toeach variation of color 1 Lighter -9 darker
 	// Light Variation
 
 	@if ($val !=black and $val != white) {
 		@for $i from 1 through 9 {
+			// text-color-light-#
 			.text-#{$key}-light-#{$i} {
 				color: mix(white, $val, $i * 10%);
 			}
+
+			// text-hover-color-light-#
+			.text-hover-#{$key}-light-#{$i} {
+				&:hover {
+					color: mix(white, $val, $i * 10%);
+				}
+			}
+
+			// bg-color-light-#
 			.bg-#{$key}-light-#{$i} {
 				background-color: mix(white, $val, $i * 10%);
 			}
@@ -24,6 +51,14 @@
 			.text-#{$key}-dark-#{$i} {
 				color: mix(black, $val, $i * 10%);
 			}
+
+			// text-hover-dark
+			.text-hover-#{$key}-dark-#{$i} {
+				&:hover {
+					color: mix(black, $val, $i * 10%);
+				}
+			}
+
 			.bg-#{$key}-dark-#{$i} {
 				background-color: mix(black, $val, $i * 10%);
 			}
@@ -34,4 +69,30 @@
 // 	.test-if {
 // 		color: black;
 // 	}
+// }
+
+//? example of how you can use the & symbol to create more concise and readable CSS:
+// Sass example
+//! .button {
+//   padding: 10px 20px;
+//   font-size: 16px;
+//   background-color: #007bff;
+//   color: #fff;
+//   border: none;
+//   border-radius: 4px;
+
+//   &:hover {
+//     background-color: #0056b3;
+//     cursor: pointer;
+//   }
+
+//   &:focus {
+//     outline: none;
+//     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+//   }
+
+//   &.disabled {
+//     background-color: #ccc;
+//     cursor: not-allowed;
+//   }
 // }
